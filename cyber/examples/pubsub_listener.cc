@@ -14,40 +14,28 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/examples/proto/examples.pb.h"
-
 #include "cyber/cyber.h"
-
-bool s_rdy = false;
-std::future<int> s_f;
-int async_func(int& val) {
-  std::future_status status = s_f.wait_for(std::chrono::milliseconds(1));
-  if (status != std::future_status::ready) return -1;
-  else  {
-    val = s_f.get();
-    return 0;
-  }
-}
+#include "cyber/examples/proto/examples.pb.h"
+#include "cyber/time/time.h"
+using namespace std;
 
 void MessageCallback(
-  const std::shared_ptr<apollo::cyber::examples::proto::Chatter>& msg) {
-
-  if (!s_rdy) {
-    int value = 0;
-    if (async_func(value) == 0) {
-      s_rdy = true;
-      AINFO << "calc done: " << value;
-    } else {
-      AINFO << "calc not done";
-      apollo::cyber::USleep(5000 * 1000);   // 主动yield
+    const std::shared_ptr<apollo::cyber::examples::proto::Chatter>& msg) {
+    static double time_sum = 0;
+    uint64_t bytes_size = msg->lidar_timestamp();
+    auto diff = apollo::cyber::Time::Now().ToNanosecond() - msg->timestamp();
+    AINFO << "recv msg-seq-> " << msg->seq() << " msg: " << (uint32_t)msg->content()[bytes_size - 1]
+          << " delta-time: " << (double)diff / 1000000.0;
+    time_sum += (double)diff / 1000000.0;
+    if (msg->seq() == 127) {
+      AINFO << "Average time: " << time_sum / 128.0;
     }
-  }
 
-  AINFO << "Received message seq-> " << msg->seq();
-  AINFO << "msgcontent->" << msg->content();
 }
 
 int main(int argc, char* argv[]) {
+  AINFO << "the recv battle begin...";
+
   // init cyber framework
   apollo::cyber::Init(argv[0]);
   // create listener node
@@ -56,12 +44,6 @@ int main(int argc, char* argv[]) {
   auto listener =
       listener_node->CreateReader<apollo::cyber::examples::proto::Chatter>(
           "channel/chatter", MessageCallback);
-
-  s_f = std::async(std::launch::async, []() {
-    std::this_thread::sleep_for(std::chrono::milliseconds(5000));
-    return 8;
-    });
-
   apollo::cyber::WaitForShutdown();
   return 0;
 }
