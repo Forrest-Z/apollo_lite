@@ -27,7 +27,8 @@
 #include <vector>
 
 #include "cyber/cyber.h"
-#include "modules/common/monitor_log/proto/monitor_log.pb.h"
+// #include "modules/common/monitor_log/proto/monitor_log.pb.h"
+#include "proto/monitor_log.pb.h"
 #include "modules/common/util/message_util.h"
 
 /**
@@ -50,6 +51,7 @@ using MessageItem = std::pair<MonitorMessageItem::LogLevel, std::string>;
  */
 class MonitorLogger {
  public:
+  // MonitorLogger(const MonitorMessageItem::MessageSource &source): source_(source) {}
   virtual ~MonitorLogger() = default;
 
   /**

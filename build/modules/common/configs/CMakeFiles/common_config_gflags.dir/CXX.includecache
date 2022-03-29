@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../modules/common/../../modules/common/configs/config_gflags.h
+gflags/gflags.h
+../modules/common/../../modules/common/configs/gflags/gflags.h
+
+/home/allen/opensource/apollo_lite/modules/common/configs/config_gflags.cc
+modules/common/configs/config_gflags.h
+/home/allen/opensource/apollo_lite/modules/common/configs/modules/common/configs/config_gflags.h
+
+/usr/local/include/gflags/gflags.h
+string
+-
+vector
+-
+gflags/gflags_declare.h
+/usr/local/include/gflags/gflags/gflags_declare.h
+gflags_gflags.h
+/usr/local/include/gflags/gflags_gflags.h
+
+/usr/local/include/gflags/gflags_declare.h
+string
+-
+stdint.h
+-
+sys/types.h
+-
+inttypes.h
+-
+
+/usr/local/include/gflags/gflags_gflags.h
+

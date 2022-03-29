@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../libcommon_monitor_log.a  CMakeFiles/common_monitor_log.dir/monitor_log_buffer.cc.o CMakeFiles/common_monitor_log.dir/monitor_logger.cc.o
+/usr/bin/ranlib ../../../libcommon_monitor_log.a

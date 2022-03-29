@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../libadapter_config_proto.a  CMakeFiles/adapter_config_proto.dir/adapter_config.pb.cc.o
+/usr/bin/ranlib ../../../../libadapter_config_proto.a

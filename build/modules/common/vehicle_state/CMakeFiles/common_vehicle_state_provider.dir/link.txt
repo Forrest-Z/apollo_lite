@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../libcommon_vehicle_state_provider.a  CMakeFiles/common_vehicle_state_provider.dir/vehicle_state_provider.cc.o
+/usr/bin/ranlib ../../../libcommon_vehicle_state_provider.a

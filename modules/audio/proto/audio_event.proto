@@ -18,9 +18,9 @@ syntax = "proto2";
 
 package apollo.audio;
 
-import "modules/audio/proto/audio_common.proto";
-import "modules/common/proto/header.proto";
-import "modules/localization/proto/pose.proto";
+import "audio_common.proto";
+import "header.proto";
+import "pose.proto";
 
 message AudioEvent {
   optional apollo.common.Header header = 1;
@@ -30,5 +30,6 @@ message AudioEvent {
   optional bool siren_is_on = 5;
   optional apollo.audio.AudioDirection audio_direction = 6
       [default = UNKNOWN_DIRECTION];
-  optional apollo.localization.Pose pose = 7;
+  //optional apollo.localization.Pose pose = 7;
+  optional apollo.common.Pose pose = 7;
 }

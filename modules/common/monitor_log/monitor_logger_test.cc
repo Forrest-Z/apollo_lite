@@ -26,15 +26,16 @@ namespace monitor {
 
 class MonitorTest : public MonitorLogger {
  public:
-  explicit MonitorTest(const MonitorMessageItem::MessageSource &source)
-      : MonitorLogger(source) {}
+  // explicit MonitorTest(const MonitorMessageItem::MessageSource &source)
+  //     : MonitorLogger(source) {}
 
  private:
   void DoPublish(MonitorMessage *) const override {}
 };
 
 TEST(MonitorTest, Publish) {
-  MonitorTest monitor(MonitorMessageItem::CONTROL);
+  // MonitorTest monitor(MonitorMessageItem::CONTROL);
+
   //  std::vector<std::pair<MonitorMessageItem::LogLevel, std::string>> items{
   //      {MonitorMessageItem::INFO, "info message"},
   //      {MonitorMessageItem::WARN, "warn message"},

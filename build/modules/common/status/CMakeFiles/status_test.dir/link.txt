@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/status_test.dir/status_test.cc.o  -o ../../../status_test  -L/usr/local/lib -Wl,-rpath,/usr/local/lib ../../../libcommon_status.a ../../../lib/libgtest.a ../../../lib/libgtest_main.a ../../../libcommon_proto.a /usr/local/lib/libprotobuf.so ../../../lib/libgtest.a -lpthread 

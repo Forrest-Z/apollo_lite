@@ -15,12 +15,11 @@
  *****************************************************************************/
 
 #include "modules/common/util/message_util.h"
-
 #include <vector>
 
 #include "gtest/gtest.h"
-#include "modules/common/util/testdata/simple.pb.h"
-
+//#include "modules/common/util/testdata/simple.pb.h"
+#include "modules/common/proto/simple.pb.h"
 namespace apollo {
 namespace common {
 namespace util {

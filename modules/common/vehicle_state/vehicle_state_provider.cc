@@ -213,11 +213,11 @@ double VehicleStateProvider::timestamp() const {
   return vehicle_state_.timestamp();
 }
 
-const localization::Pose &VehicleStateProvider::pose() const {
+const Pose &VehicleStateProvider::pose() const {
   return vehicle_state_.pose();
 }
 
-const localization::Pose &VehicleStateProvider::original_pose() const {
+const Pose &VehicleStateProvider::original_pose() const {
   return original_localization_.pose();
 }
 

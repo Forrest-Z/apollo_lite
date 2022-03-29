@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../libaudio_offline_processing.a  CMakeFiles/audio_offline_processing.dir/audio_offline_processing.cc.o
+/usr/bin/ranlib ../../../libaudio_offline_processing.a

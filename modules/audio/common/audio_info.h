@@ -19,8 +19,10 @@
 #include <string>
 #include <vector>
 
-#include "modules/drivers/microphone/proto/audio.pb.h"
-#include "modules/drivers/microphone/proto/microphone_config.pb.h"
+// #include "modules/drivers/microphone/proto/audio.pb.h"
+// #include "modules/drivers/microphone/proto/microphone_config.pb.h"
+#include "proto/audio.pb.h"
+#include "proto/microphone_config.pb.h"
 
 namespace apollo {
 namespace audio {

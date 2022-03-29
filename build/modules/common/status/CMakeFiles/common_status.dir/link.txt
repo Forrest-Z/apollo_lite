@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../libcommon_status.a  
+/usr/bin/ranlib ../../../libcommon_status.a

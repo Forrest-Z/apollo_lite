@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../libaudio_common.a  CMakeFiles/audio_common.dir/audio_gflags.cc.o CMakeFiles/audio_common.dir/audio_info.cc.o CMakeFiles/audio_common.dir/message_process.cc.o
+/usr/bin/ranlib ../../../libaudio_common.a

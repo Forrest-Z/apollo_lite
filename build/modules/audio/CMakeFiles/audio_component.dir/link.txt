@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../libaudio_component.a  CMakeFiles/audio_component.dir/audio_component.cc.o
+/usr/bin/ranlib ../../libaudio_component.a

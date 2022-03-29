@@ -17,8 +17,10 @@
 #pragma once
 
 #include "modules/common/configs/vehicle_config_helper.h"
-#include "modules/common/vehicle_model/proto/vehicle_model_config.pb.h"
-#include "modules/common/vehicle_state/proto/vehicle_state.pb.h"
+// #include "modules/common/vehicle_model/proto/vehicle_model_config.pb.h"
+// #include "modules/common/vehicle_state/proto/vehicle_state.pb.h"
+#include "proto/vehicle_model_config.pb.h"
+#include "proto/vehicle_state.pb.h"
 
 namespace apollo {
 namespace common {

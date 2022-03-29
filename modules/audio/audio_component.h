@@ -25,7 +25,8 @@
 
 #include "cyber/component/component.h"
 #include "modules/audio/common/message_process.h"
-#include "modules/localization/proto/localization.pb.h"
+// #include "modules/localization/proto/localization.pb.h"
+#include "../common/proto/localization.pb.h"
 
 /**
  * @namespace apollo::audio

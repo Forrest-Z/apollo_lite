@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../libcommon_filters.a  CMakeFiles/common_filters.dir/digital_filter.cc.o CMakeFiles/common_filters.dir/digital_filter_coefficients.cc.o CMakeFiles/common_filters.dir/mean_filter.cc.o
+/usr/bin/ranlib ../../../libcommon_filters.a

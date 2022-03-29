@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../libaudio_inference.a  CMakeFiles/audio_inference.dir/direction_detection.cc.o CMakeFiles/audio_inference.dir/moving_detection.cc.o CMakeFiles/audio_inference.dir/siren_detection.cc.o
+/usr/bin/ranlib ../../../libaudio_inference.a

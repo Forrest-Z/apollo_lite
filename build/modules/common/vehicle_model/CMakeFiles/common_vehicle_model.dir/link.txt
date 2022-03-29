@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../libcommon_vehicle_model.a  CMakeFiles/common_vehicle_model.dir/vehicle_model.cc.o
+/usr/bin/ranlib ../../../libcommon_vehicle_model.a

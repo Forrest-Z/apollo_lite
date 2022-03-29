@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../libcommon_vehicle_config_helper.a  CMakeFiles/common_vehicle_config_helper.dir/vehicle_config_helper.cc.o
+/usr/bin/ranlib ../../../libcommon_vehicle_config_helper.a

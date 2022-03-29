@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../libcommon_config_gflags.a  CMakeFiles/common_config_gflags.dir/config_gflags.cc.o
+/usr/bin/ranlib ../../../libcommon_config_gflags.a

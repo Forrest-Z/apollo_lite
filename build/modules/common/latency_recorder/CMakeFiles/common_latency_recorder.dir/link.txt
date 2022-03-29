@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../libcommon_latency_recorder.a  
+/usr/bin/ranlib ../../../libcommon_latency_recorder.a

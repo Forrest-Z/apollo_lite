@@ -134,13 +134,13 @@ double DirectionDetection::GccPhat(const torch::Tensor& sig,
             n = n_sig + n_refsig;
   torch::Tensor psig = at::constant_pad_nd(sig, {0, n_refsig}, 0);
   torch::Tensor prefsig = at::constant_pad_nd(refsig, {0, n_sig}, 0);
-  psig = at::rfft(psig, 1, false, true);
-  prefsig = at::rfft(prefsig, 1, false, true);
+  // to be repair....
+  // psig = at::rfft(psig, 1, false, true);
+  // prefsig = at::rfft(prefsig, 1, false, true);
 
   ConjugateTensor(&prefsig);
   torch::Tensor r = ComplexMultiply(psig, prefsig);
-  torch::Tensor cc =
-      at::irfft(r / ComplexAbsolute(r), 1, false, true, {interp * n});
+  torch::Tensor cc; // =at::irfft(r / ComplexAbsolute(r), 1, false, true, {interp * n});
   int max_shift = static_cast<int>(interp * n / 2);
   if (max_tau != 0)
     max_shift = std::min(static_cast<int>(interp * fs * max_tau), max_shift);

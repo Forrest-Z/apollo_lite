@@ -22,8 +22,10 @@
 
 #include <string>
 
-#include "modules/common/configs/proto/vehicle_config.pb.h"
-#include "modules/common/proto/pnc_point.pb.h"
+// #include "modules/common/configs/proto/vehicle_config.pb.h"
+// #include "modules/common/proto/pnc_point.pb.h"
+#include "proto/vehicle_config.pb.h"
+#include "proto/pnc_point.pb.h"
 
 #include "cyber/common/macros.h"
 #include "modules/common/math/box2d.h"

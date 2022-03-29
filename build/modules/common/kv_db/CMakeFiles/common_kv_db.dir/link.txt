@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../libcommon_kv_db.a  CMakeFiles/common_kv_db.dir/kv_db.cc.o CMakeFiles/common_kv_db.dir/kv_db_tool.cc.o
+/usr/bin/ranlib ../../../libcommon_kv_db.a

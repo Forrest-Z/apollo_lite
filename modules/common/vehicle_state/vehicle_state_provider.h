@@ -23,12 +23,15 @@
 #include <memory>
 #include <string>
 
-#include "modules/canbus/proto/chassis.pb.h"
+// #include "modules/canbus/proto/chassis.pb.h"
+#include "proto/chassis.pb.h"
 #include "modules/common/math/box2d.h"
 #include "modules/common/math/vec2d.h"
 #include "modules/common/status/status.h"
-#include "modules/common/vehicle_state/proto/vehicle_state.pb.h"
-#include "modules/localization/proto/localization.pb.h"
+// #include "modules/common/vehicle_state/proto/vehicle_state.pb.h"
+// #include "modules/localization/proto/localization.pb.h"
+#include "proto/vehicle_state.pb.h"
+#include "proto/localization.pb.h"
 
 /**
  * @namespace apollo::common
@@ -63,8 +66,11 @@ class VehicleStateProvider {
 
   double timestamp() const;
 
-  const localization::Pose& pose() const;
-  const localization::Pose& original_pose() const;
+  // const localization::Pose& pose() const;
+  // const localization::Pose& original_pose() const;
+
+  const Pose& pose() const;
+  const Pose& original_pose() const;
 
   /**
    * @brief Default destructor.
